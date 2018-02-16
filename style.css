@@ -55,7 +55,7 @@ h4 {
 }
 
 #output-text {
-    text-indent: 4rem;
+    margin-left: 4rem;
 }
 
 #output-container {
