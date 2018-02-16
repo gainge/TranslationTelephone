@@ -8,7 +8,7 @@ $(document).ready(function() {
     var num_active = 0;
     var MAX_ACTIVE = 4;
 
-    var tags = ["class='tag is-success is-large'", "class='tag is-primary is-large'", "class='tag is-link is-large'", "class='tag is-info is-large'"]
+    var tags = ["class='link link1'", "class='link link2'", "class='link link3'", "class='link link4'", "class='link link5'", "class='link link6'"]
 
     var all_codes = ['ar',      'zh',      'nl',    'et',       'fr',     'de',     'it',      'hu',        'ga',    'ja',       'ko',     'la',    'lv',      'ms',    'mi',    'fa',      'pl',     'pt',         'ru',      'sm',     'so',     'sw',      'es',      'th',   'tr',      'uk',        'vi',         'zu'];
     var all_names = ['Arabic',	'Chinese', 'Dutch', 'Estonian', 'French', 'German', 'Italian', 'Hungarian', 'Irish', 'Japanese', 'Korean', 'Latin', 'Latvian', 'Malay', 'Maori', 'Persian', 'Polish', 'Portuguese', 'Russian', 'Samoan', 'Somali', 'Swahili', 'Spanish', 'Thai', 'Turkish', 'Ukrainian', 'Vietnamese', 'Zulu'];
@@ -64,17 +64,37 @@ $(document).ready(function() {
             var tag1 = tags[i % tags.length];
             var tag2 = tags[(i + 1) % tags.length];
 
+            // Check for the end color
+            if (i + 1 == results.length - 1) {
+                tag2 = tags[0]; // Make the last color always match the first
+            }
+
             result += "<div class='chain_link'>";
-            result += "<h4 ";
+
+            // Div for left side
+            result += "<div ";
             result += tag1;
             result += ">";
+            // Actual text body
+            result += "<h4>";
             result += results[i];
-            result += "</h4><h4 class='arrow'>></h4>";
-            result += "<h4 ";
+            result += "</h4>";
+            result += "</div>"
+
+            // Arrow div
+            result += "<div><h4 class='arrow'>></h4></div>"
+
+            // Div for the right side
+            result += "<div ";
             result += tag2;
             result += ">";
+            result += "<h4>";
             result += results[i + 1];
-            result += "</h4></div>";
+            result += "</h4>";
+            result += "</div>";
+
+            // Closing the whole div
+            result += "</div";
         }
 
         $("#results-content").append(result);

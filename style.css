@@ -9,6 +9,40 @@ h4 {
     font-size: 1.4rem;
 }
 
+/* Classes for the translation chain links */
+.link {
+    border-color: white;
+    border-radius: 5px;
+    margin-top: 0.25rem;
+    margin-bottom:0.25rem;
+    padding: 0.3rem;
+}
+
+.link1 {
+    background-color: #875E82;
+    color: white;
+}
+.link2 {
+    background-color: #7577A0;
+    color: white;
+}
+.link3 {
+    background-color: #5290B1;
+    color: white;
+}
+.link4 {
+    background-color: #27A8B1;
+    color: white;
+}
+.link5 {
+    background-color: #2DBCA1;
+    color: white;
+}
+.link6 {
+    background-color: #65CC85;
+    color: white;
+}
+
 
 
 
