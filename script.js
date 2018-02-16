@@ -8,6 +8,25 @@ $(document).ready(function() {
     var num_active = 0;
     var MAX_ACTIVE = 4;
 
+    // Initialize the code dictionary
+    var codeDict = {};
+    codeDict['en'] = 'English';
+    codeDict['nl'] = 'Dutch';
+    codeDict['de'] = 'German';
+    codeDict['it'] = 'Italian';
+    codeDict['hu'] = 'Hungarian';
+    codeDict['ga'] = 'Irish';
+    codeDict['la'] = 'Latin';
+    codeDict['lv'] = 'Latvian';
+    codeDict['ms'] = 'Malay';
+    codeDict['mi'] = 'Maori';
+    codeDict['pt'] = 'Portuguese';
+    codeDict['sm'] = 'Samoan';
+    codeDict['so'] = 'Somali';
+    codeDict['es'] = 'Spanish';
+    codeDict['sw'] = 'Swahili';
+    codeDict['zu'] = 'zulu';
+
     var tags = ["class='link link1'", "class='link link2'", "class='link link3'", "class='link link4'", "class='link link5'", "class='link link6'"]
 
     var all_codes = ['ar',      'zh',      'nl',    'et',       'fr',     'de',     'it',      'hu',        'ga',    'ja',       'ko',     'la',    'lv',      'ms',    'mi',    'fa',      'pl',     'pt',         'ru',      'sm',     'so',     'sw',      'es',      'th',   'tr',      'uk',        'vi',         'zu'];
@@ -84,10 +103,19 @@ $(document).ready(function() {
             result += "<h4>";
             result += results[i];
             result += "</h4>";
-            result += "</div>"
+            result += "</div>";
 
             // Arrow div
-            result += "<div><h4 class='arrow'>></h4></div>"
+            result += "<div><h4 class='arrow'>></h4>";
+            // Add in the translation
+            result += "<p class='label_small'>"
+            result += codeDict[lang_chain[i][0]];
+            result += " to ";
+            result += codeDict[lang_chain[i][1]];
+            result += "</p>";
+            // Close the div
+            result += "</div>";
+
 
             // Div for the right side
             result += "<div ";

@@ -119,6 +119,14 @@ h4 {
     text-align: center;
 }
 
+.label_small {
+    font-size: 0.7rem;
+    background-color: #d9d9d9;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+    border-radius: 4px;
+}
+
 .button {
     background-color: #0B877D;
     border: white 1px;
