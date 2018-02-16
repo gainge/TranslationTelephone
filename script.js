@@ -195,6 +195,9 @@ $(document).ready(function() {
     $('#translate-button').click(function(event) {
         lang_chain = build_chain();
 
+        // Clear the results body, if necessary
+        $("#results-content").empty();
+
         results = []; // Reset the results
 
         console.log('preparing to make API call!');
