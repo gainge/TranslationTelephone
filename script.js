@@ -55,8 +55,13 @@ $(document).ready(function() {
 
 
     function translationFinished(finalOutput) {
+        // Remove the spinner
+        $('#loader').remove();
         // Display the final translated text
         $('#output-text').text(finalOutput);
+        $('#output-text').addClass('link');
+        $('#output-text').addClass('link1');
+
 
         // And build a list of the individual links on the page
         var result = "";
@@ -153,6 +158,8 @@ $(document).ready(function() {
             },
             error: function(err) {
                 console.log(err);
+                $('#loader').remove();
+                alert("Something went wrong in translation, sorry :(  Please try a different language combination");
             }
         });
     };
@@ -213,10 +220,17 @@ $(document).ready(function() {
 
 
     $('#translate-button').click(function(event) {
+        if ($('#loader').length) {
+            console.log("You can't do that!  Be patient!!");
+            return;
+        }
+
         lang_chain = build_chain();
 
         // Clear the results body, if necessary
         $("#results-content").empty();
+
+
 
         results = []; // Reset the results
 
@@ -225,6 +239,9 @@ $(document).ready(function() {
         var text = $('#start-text').val();
 
         if (text) {
+            // Add the loading spinner
+            $('#output-container').append('<div id="loader" class="loader"></div>');
+
             results.push(text);
             doTranslation(lang_chain, 0, text);
         }
