@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home Page</title>
+        <link rel="stylesheet" href="bulma.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+
+
+    <body>
+        <div id='header'>
+            <div id='header-text'>
+                <!-- Header title -->
+                <h1 class='title'>Translation Telephone</h1>
+
+                <!-- Then maybe a short paragraph explaining what the site does -->
+                <p class='subtitle'>Enter in some text and build your chain!</p>
+            </div>
+            <div id='header-img'>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Then the meat of this puppy! -->
+
+        <div id='main-content'>
+            <div id='translation-main'>
+                <div id='entry-submit-container'>
+                    <!-- <input id='start-text' type='input' style='display:block;'> -->
+                    <div class="field" id='text-entry'>
+                      <div class="control">
+                        <textarea id='start-text' class="textarea is-info" type="text" placeholder="Text to translate"></textarea>
+                      </div>
+                    </div>
+                    <input class='button' id='translate-button' type='submit' value='Translate!'>
+
+                </div>
+
+                <div id='language-container'>
+                    <div id='button-container'>
+                        <button id='add-button' class='button'>+</button>
+                        <button id='del-button' class='button'>-</button>
+                    </div>
+
+
+                    <div id='languages'>
+
+                    </div>
+
+                </div>
+
+                <div id='output-container'>
+                    <p class'title is-6'>Output:</p>
+                    <br>
+                    <p id='output-text' class='title is-4'>...<p>
+                </div>
+
+
+            </div>
+
+            <div id='results-main'>
+                <h1 class='title'>Translation Chain:</h1>
+
+                <div id='results-content'>
+                    <!-- <div class='chain_link'>
+                        <h4 class='original'>Gibson likes food</h4>
+                        <h4>></h4>
+                        <h4 class='translated'>Gibson likes food</h4>
+                    </div> -->
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- <script type="text/javascript" src="jquery-1.8.3.js"></script> -->
+        <script src="script.js"></script>
+    </body>
+
+
+</html>

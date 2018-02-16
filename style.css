@@ -1,0 +1,111 @@
+body {
+    font-family: helvetica !important;
+    color: black !important;
+}
+
+h4 {
+    font-family: helvetica !important;
+    color: black !important;
+    font-size: 1.4rem;
+}
+
+
+
+
+/* I just hate the default look */
+
+#main-content {
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+#header {
+    margin-left: 3rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+#text-entry {
+    margin-right: 1rem;
+    max-width: 22rem;
+}
+
+#language-container {
+    margin-left: 1rem;
+}
+
+#button-container {
+    margin-top: -0.3rem;
+    margin-right: 2rem;
+}
+
+#add-button {
+    margin-bottom: 0.4rem;
+}
+
+#results-main {
+    margin-top: 4rem;
+}
+
+.chain_link {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 4fr 1fr 4fr;
+    text-align: center;
+}
+
+#output-text {
+    text-indent: 4rem;
+}
+
+#output-container {
+    margin-left: 2rem;
+}
+
+.translated {
+}
+
+.arrow {
+    text-align: center;
+}
+
+.button {
+    background-color: #0B877D;
+    border: white 1px;
+    border-radius: 3px;
+    color: white;
+    padding: 0.3rem 0.7rem;
+    padding-top: 0.2rem;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 1.6rem;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+
+    min-width: 3.8rem;
+}
+
+.button:hover {
+    box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24),0 9px 25px 0 rgba(0,0,0,0.19);
+}
+
+
+#translation-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr
+}
+
+
+#language-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+
+
+
+
+/* I like my whitespace */
