@@ -59,9 +59,8 @@ h4 {
     margin-top: 1rem;
 }
 
-#text-entry {
-    margin-right: 1rem;
-    max-width: 22rem;
+#entry-submit-container {
+    margin-right: 2.3rem;
 }
 
 #language-container {
@@ -79,6 +78,12 @@ h4 {
 
 #results-main {
     margin-top: 4rem;
+}
+
+#tranlation-button-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1rem;
 }
 
 .chain_link {
