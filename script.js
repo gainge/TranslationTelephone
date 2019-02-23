@@ -157,7 +157,7 @@ $(document).ready(function() {
         myurl += '&';
         myurl = addQuery(myurl, 'target', target);
         myurl += '&';
-        myurl = addQuery(myurl, 'key', 'AIzaSyBs9FLAojiiJ3OY7Jm2Ng1oazVu-0x7TLA'); // Hard coded LUL
+        myurl = addQuery(myurl, 'key', $("#api-key").val()); // Ayy, no longer hard-coded
 
         console.log(myurl);
 
@@ -258,10 +258,33 @@ $(document).ready(function() {
     });
 
 
+    $("#api-key").keyup(function(event) {
+        if (!$("#api-key").val()) {
+            $("#api-key").addClass("is-danger");
+            return;
+        } else {
+            $("#api-key").removeClass("is-danger");
+        }
+    });
+
+
 
     $('#translate-button').click(function(event) {
         if ($('#loader').length) {
             console.log("You can't do that!  Be patient!!");
+            return;
+        }
+        if (!$("#api-key").val()) {
+            $("#api-key").addClass("is-danger");
+            alert("Please enter an API key");
+            return;
+        }
+
+        // Obtain the starting text
+        var text = $('#start-text').val();
+
+        if (!text) {
+            alert("Please enter some input text");
             return;
         }
 
@@ -273,20 +296,16 @@ $(document).ready(function() {
         results = []; // Reset the results
 
         console.log('preparing to make API call!');
-        // Obtain the starting text
-        var text = $('#start-text').val();
+        
+        // Add the loading spinner
+        $('#output-container').append('<div id="loader" class="loader"></div>');
 
-        if (text) {
-            // Add the loading spinner
-            $('#output-container').append('<div id="loader" class="loader"></div>');
-
-            results.push(text);
-            doTranslation(lang_chain, 0, text);
-        }
+        results.push(text);
+        doTranslation(lang_chain, 0, text);
 
     });
 
-    
+
     var exampleIndex = 0;
 
     $('#demo-button').click(function(event) {

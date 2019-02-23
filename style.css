@@ -57,6 +57,9 @@ h4 {
     margin-left: 3rem;
     margin-bottom: 2rem;
     margin-top: 1rem;
+    margin-right: 3rem;
+    display: grid;
+    grid-template-columns: 5fr 1fr 4fr;
 }
 
 #entry-submit-container {
