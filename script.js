@@ -187,7 +187,7 @@ $(document).ready(function() {
             error: function(err) {
                 console.log(err);
                 $('#loader').remove();
-                alert("Something went wrong in translation, sorry :(  Please try a different language combination");
+                alert("Something went wrong in translation, sorry :(  Please check your API key");
             }
         });
     };
